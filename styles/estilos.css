@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --cor--principal: #3c2415;
+    --cor--secundaria: #ff934f;
+    --cor-preta: #000000;
+    --cor-branca:#FFFFFF;
+
+    --cor-secundaria-transparente: rgba(255, 147, 79, 0.7);
+
+    --font-principal: 'Aclonica', sans-serif;
+    --font-secundaria: 'Lato', sans-serif;
+
+}
+
+.principal{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor--secundaria);
+}
+
+header {
+    display: flex;
+    background-color: var(--cor--principal);
+    height: 83px;
+}
+
+.nav-superior{
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.menu-superior{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 16px;
+    font-family: var(--font-principal);
+}
+
+.menu-superior__link{
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+
