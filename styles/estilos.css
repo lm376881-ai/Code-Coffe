@@ -24,6 +24,7 @@ header {
     display: flex;
     background-color: var(--cor--principal);
     height: 83px;
+    border-bottom: 3px solid var(--cor--secundaria);
 }
 
 .nav-superior{
@@ -46,4 +47,45 @@ header {
     color: var(--cor-branca);
     text-decoration: none;
 }
+.menu-superior__link:hover{
+    color: var(--cor--secundaria);
+    font-size: 18px;
+}
+
+/* código a baixo é para por o banner nas paginas idiota */
+
+.banner {
+    width: 100%;
+    height: 335px;
+    background-image: url('../assets/banner.png');
+    /*background-repeat: no-repeat; */
+    background-size: cover;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+/* configurar tela laranja e conteudo digitaos*/
+.banner__card{
+    background-color: var(--cor-secundaria-transparente);
+    width: 600px;
+    height: 160px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-principal);
+    color: var(--cor-branca);
+
+    
+}
+
+.banner__card h2{
+    font-size: 24px;
+}
+
+.banner__card h1{
+    font-size: 48px;
+}
+
 
