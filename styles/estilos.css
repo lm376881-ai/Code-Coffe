@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-
+ 
+ 
 :root {
     --cor--principal: #3c2415;
     --cor--secundaria: #ff934f;
     --cor-preta: #000000;
     --cor-branca:#FFFFFF;
-
+ 
     --cor-secundaria-transparente: rgba(255, 147, 79, 0.7);
-
+ 
     --font-principal: 'Aclonica', sans-serif;
     --font-secundaria: 'Lato', sans-serif;
-
+ 
 }
-
+ 
 .principal{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--cor--secundaria);
 }
-
+ 
 header {
     display: flex;
     background-color: var(--cor--principal);
     height: 83px;
     border-bottom: 3px solid var(--cor--secundaria);
 }
-
+ 
 .nav-superior{
     width: 1000px;
     display: flex;
@@ -34,7 +34,7 @@ header {
     justify-content: space-between;
     margin: auto;
 }
-
+ 
 .menu-superior{
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@ header {
     font-size: 16px;
     font-family: var(--font-principal);
 }
-
+ 
 .menu-superior__link{
     color: var(--cor-branca);
     text-decoration: none;
@@ -51,16 +51,16 @@ header {
     color: var(--cor--secundaria);
     font-size: 18px;
 }
-
+ 
 /* código a baixo é para por o banner nas paginas idiota */
-
+ 
 .banner {
     width: 100%;
     height: 335px;
     background-image: url('../assets/banner.png');
     /*background-repeat: no-repeat; */
     background-size: cover;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -76,16 +76,46 @@ header {
     align-items: center;
     font-family: var(--font-principal);
     color: var(--cor-branca);
-
+ 
     
 }
-
+ 
 .banner__card h2{
     font-size: 24px;
 }
-
+ 
 .banner__card h1{
     font-size: 48px;
 }
-
-
+ 
+.teste{
+ 
+    background-color: var(--cor-branca);
+    border-radius: 16px;
+    height: 1000px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -35px;
+    margin-bottom: 16px;
+}
+ 
+.rodape{
+    background-color: var(--cor--principal);
+    color: var(--cor-branca);
+    padding: 26px 0;
+    height: 69px;
+    margin-top: 59px;
+    font-family: var(--font-secundaria);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid var(--cor-branca);
+ 
+}
+ 
+.rodape__link{
+    color: var(--cor-branca);
+    text-decoration: none;
+}
