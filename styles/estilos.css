@@ -67,6 +67,8 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+
 /* configurar tela laranja e conteudo digitaos*/
 .banner__card{
     background-color: var(--cor-secundaria-transparente);
@@ -101,12 +103,7 @@ header {
     
 }
 
-.conteudo-principal__titulo {
-    font-family: var(--font-principal);
-    font-size: 48px;
-    color: var(--cor--secundaria);
-    margin-bottom: 16px;
-}
+
 
 /* deixar imagem do lado , display flex para deixar imagem de um lado texto de outro, gap deixa um vão entre informação e imagem*/
 .conteudo-principal__produto{
@@ -123,6 +120,13 @@ header {
     border-radius: 16px;
     box-shadow: 4px 4px var(--cor-da-sombra);   /* sombrear*/
 
+}
+
+.conteudo-principal__titulo {
+    font-family: var(--font-principal);
+    font-size: 48px;
+    color: var(--cor--secundaria);
+    margin-bottom: 16px;
 }
 
 .conteudo-principal__subtitulo { /* alterar fonte do subtitulo ex cappcino caseiro*/
@@ -147,6 +151,26 @@ margin: 20px 0 16px 0;
 
 }
 
+
+.lista-conteudo{
+    list-style-type: disc;
+    line-height: 2;
+    margin-left: 35px;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: var(--font-secundaria);
+    justify-content: space-between;
+}
+
+.conteudo-principal-sub {
+    
+    font-family: var(--font-principal);
+    font-size: 48px;
+    color: var(--cor--principal);
+    margin-bottom: 16px;
+
+}
+
 .botao {
     width: 196px;
     height: 54px;
@@ -159,13 +183,16 @@ margin: 20px 0 16px 0;
     display: flex;
     justify-content: center; /* deixar texto no centro*/
     align-items: center;  /* alinhar*/
-    border-top: 24px;
+    margin-top: 9px;   
 
 }
 
 .botao:hover {
     background-color: var(--cor--secundaria);  /*trocar cor do botão quando passo o mouse em cima idiota*/
 }
+
+
+
 
  
 .rodape{
