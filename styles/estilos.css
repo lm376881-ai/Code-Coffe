@@ -2,22 +2,22 @@
  
  
 :root {
+    
     --cor--principal: #3c2415;
     --cor--secundaria: #ff934f;
     --cor--cinza: #757575;
     --cor-preta: #000000;
     --cor-branca:#FFFFFF;
+    --cor-cinza-card: #C1C1C1;
  
     --cor-secundaria-transparente: rgba(255, 147, 79, 0.7);
     --cor-da-sombra: rgba(0, 0, 0, 0.25);
     
- 
     --font-principal: 'Aclonica', sans-serif;
     --font-secundaria: 'Lato', sans-serif;
- 
 }
  
-.principal{
+.principal {
     width: 100%;
     min-height: 100vh;
     background-color: var(--cor--secundaria);
@@ -30,7 +30,7 @@ header {
     border-bottom: 3px solid var(--cor--secundaria);
 }
  
-.nav-superior{
+.nav-superior {
     width: 1000px;
     display: flex;
     flex-direction: row;
@@ -38,7 +38,7 @@ header {
     margin: auto;
 }
  
-.menu-superior{
+.menu-superior {
     display: flex;
     align-items: center;
     gap: 32px;
@@ -46,11 +46,11 @@ header {
     font-family: var(--font-principal);
 }
  
-.menu-superior__link{
+.menu-superior__link {
     color: var(--cor-branca);
     text-decoration: none;
 }
-.menu-superior__link:hover{
+.menu-superior__link:hover {
     color: var(--cor--secundaria);
     font-size: 18px;
 }
@@ -70,7 +70,7 @@ header {
 
 
 /* configurar tela laranja e conteudo digitaos*/
-.banner__card{
+.banner__card {
     background-color: var(--cor-secundaria-transparente);
     width: 600px;
     height: 160px;
@@ -80,27 +80,24 @@ header {
     justify-content: center;
     align-items: center;
     font-family: var(--font-principal);
-    color: var(--cor-branca);
-    
-}
- 
-.banner__card h2{
-    font-size: 24px;
-}
- 
-.banner__card h1{
-    font-size: 48px;
+    color: var(--cor-branca);   
 }
  
 .conteudo-principal {
-    width: 1100px;
-    height: 1498px;
+    width: 1000px;
     background-color: var(--cor-branca);
     margin: auto;
     border-radius: 16px;
     margin-top: -63px;
     padding: 32px;
+    box-sizing: border-box;
     
+}
+
+.conteudo-principal__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -114,12 +111,14 @@ header {
 }
 
 /* alterar tamanho da imagem, sobrear*/
-.conteudo-principal__imagem{
-    height: 400px;
+.conteudo-principal__imagem {
+    width: 400px;
     height: 377px;
     border-radius: 16px;
-    box-shadow: 4px 4px var(--cor-da-sombra);   /* sombrear*/
-
+    box-shadow: 3px 3px var(--cor-da-sombra);   /* sombrear*/
+   /* object-fit: contain;  imagem fica completa porem fica pequena*/  
+    object-fit: cover; /* mecher no tamaho da imagem */
+    
 }
 
 .conteudo-principal__titulo {
@@ -144,22 +143,21 @@ header {
 } 
 
 .conteudo-principal__lista-titulo{
-font-family: var(--font-principal);
-color: var(--cor--principal);
-font-size: 20px;
-margin: 20px 0 16px 0;
-
+    font-family: var(--font-principal);
+    color: var(--cor--principal);
+    font-size: 20px;
+    margin: 20px 0 16px 0;
+    line-height: 1.5;
 }
 
-
-.lista-conteudo{
-    list-style-type: disc;
-    line-height: 2;
-    margin-left: 35px;
-    justify-content: space-between;
-    font-size: 20px;
+.lista-conteudo {
     font-family: var(--font-secundaria);
-    justify-content: space-between;
+    line-height: 1.5; /* espaçamento das linhas*/
+    list-style-type: disc; /* adicionar . antes da lista */
+    list-style-position: inside;/* posicionar a lista disc*/
+    margin-bottom: 24px;
+    font-size: 20px;
+
 }
 
 .conteudo-principal-sub {
@@ -183,19 +181,89 @@ margin: 20px 0 16px 0;
     display: flex;
     justify-content: center; /* deixar texto no centro*/
     align-items: center;  /* alinhar*/
-    margin-top: 9px;   
-
+    
 }
 
 .botao:hover {
     background-color: var(--cor--secundaria);  /*trocar cor do botão quando passo o mouse em cima idiota*/
 }
 
+.conteudo-secundario {
+    font-family: var(--font-principal);
+    font-size: 48px;
+    color: var(--cor--secundaria);
+    margin-bottom: 16px;
+}
 
-
-
+.conteudo-secundario__imagem {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    margin-bottom: 20px;
  
-.rodape{
+}
+.conteudo-secundario__descricao {
+    font-family: var(--font-secundaria);
+    font-size: 20px;
+    color: var(--cor--cinza);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-avaliacao__comentario{
+    background-color: var(--cor-cinza-card);
+    border-radius: 16px;
+    width: 301px;
+    height: 328px;
+    padding: 18px 25px 34px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secundaria);
+    box-sizing: border-box;
+    
+}
+
+.cite {
+    color: var(--cor--secundaria);
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 18px;
+    font-family: var(--font-secundaria);
+}
+
+.conteudo-principal__comentarios {
+    display: flex;
+    gap: 16px; /* espaçamento entre um e outro */
+    justify-content: space-between;
+    margin: 32px 0 0 0;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rodape {
     background-color: var(--cor--principal);
     color: var(--cor-branca);
     padding: 26px 0;
@@ -210,9 +278,11 @@ margin: 20px 0 16px 0;
  
 }
  
-.rodape__link{
+.rodape__link {
     color: var(--cor-branca);
     text-decoration: none;
 }
+
+
 
 
