@@ -115,7 +115,7 @@ header {
     width: 400px;
     height: 377px;
     border-radius: 16px;
-    box-shadow: 3px 3px var(--cor-da-sombra);   /* sombrear*/
+    box-shadow: 4px 4px 4px 4px var(--cor--cinza);   /* sombrear*/
    /* object-fit: contain;  imagem fica completa porem fica pequena*/  
     object-fit: cover; /* mecher no tamaho da imagem */
     
@@ -132,6 +132,12 @@ header {
     font-family: var(--font-principal);
     color: var(--cor--principal);
     font-size: 32px;
+}
+
+.conteudo-principal__subtitulo-galeria { /* alterar fonte do subtitulo ex galeria*/
+    font-family: var(--font-secundaria);
+    color: var(--cor--preta);
+    font-size: 20px;
 }
 
 .conteudo-principal__descricao {
@@ -200,6 +206,8 @@ header {
     height: 83px;
     border-radius: 50%;
     margin-bottom: 20px;
+    border: 4px solid var(--cor-branca); /* deixar borda branca nas fotos dos comentários */ 
+    
  
 }
 .conteudo-secundario__descricao {
@@ -244,45 +252,68 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .rodape {
-    background-color: var(--cor--principal);
-    color: var(--cor-branca);
-    padding: 26px 0;
-    height: 69px;
-    margin-top: 59px;
-    font-family: var(--font-secundaria);
-    font-size: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 3px solid var(--cor-branca);
- 
-}
- 
-.rodape__link {
-    color: var(--cor-branca);
-    text-decoration: none;
+height: 100px;
+background-color: var(--cor--principal);
+border-top: 3px solid var(--cor-branca);
+margin-top: 60px
 }
 
+.rodape__conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 100%;  
+    margin: auto;
+}
+
+.rodape__conteudo p {
+font-family: var(--font-secundaria);
+ font-size: 20px;
+margin: 0;
+color: white;
+white-space: nowrap; /* impede quebra de linha */
+}
+
+/* .rodape__conteudo h2 {
+    font-family: var(--font-principal);
+    color: var(--cor-branca);
+    font-size: 20px;
+} */
+
+
+
+
+/*.rodape__conteudo p {
+    font-family: var(--font-principal);
+    font-size: 48px;
+    color: yellow;
+} */
+
+
+
+.galeria {
+margin-top: 32px;
+grid-template-columns: 1fr 1fr 1fr; /* redimencionar imagens do grid por igual utilização fração e adicionar colunas */
+display: grid;
+column-gap: 16px;
+row-gap: 8px;
+
+
+
+
+/*display: grid; as suas filhas teram que assumir como se comportaram dentro de onde o "galeria estiver sendo usado" */
+}
+
+.galeria__foto {
+    height: 215px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px var(--cor--cinza);
+
+}
 
 
 
